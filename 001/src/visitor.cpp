@@ -11,6 +11,7 @@ ReadVisitor::ReadVisitor(istream &is)
 : is(is)
 { }
 
+/* Read info from is to fill a Student */
 void 
 ReadVisitor::visit(Student *s)
 {
@@ -29,6 +30,7 @@ WriteVisitor::WriteVisitor(ostream &o)
 : counter(0), os(o)
 { }
 
+/* Write info to os */
 void
 WriteVisitor::visit(Student *s)
 {
@@ -57,6 +59,7 @@ AverageVisitor::AverageVisitor()
     scores_.push_back(0);
 }
 
+/* Add the scores */
 void
 AverageVisitor::visit(Student *s)
 {
@@ -64,6 +67,7 @@ AverageVisitor::visit(Student *s)
     scores_[i] += s->getScoreByIndex(i);
 }
 
+/* Calculate the average and output the result */
 void
 AverageVisitor::output(std::ostream &os) const
 {

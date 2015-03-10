@@ -9,12 +9,24 @@ namespace OOP {
 
 class Student;
 
+/*!
+ Base class of visitors
+ */
 class Visitor
 {
 public:
-  virtual void visit(Student *) 
+  /*!
+   visit a student
+   @param st the student
+   */
+  virtual void visit(Student *st) 
   { };
 
+  /*!
+   apply a visitor to a serial of Students
+   @param begin the first iterator of the Students
+   @param end the iterator points to the Student after the last one
+   */
   template <typename T_iter>
   void 
   apply(T_iter begin, T_iter end)
