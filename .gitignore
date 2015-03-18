@@ -1,3 +1,7 @@
 *.docx
+*.pdf
+*.zip
 .*.swp
 *~
+*.o
+*result
