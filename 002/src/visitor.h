@@ -46,9 +46,14 @@ public:
 
   virtual void visit(Student *);
 
+  /*!
+   Read and initialize a vector fo Student
+   @param the vector to be initialized
+   */
   void read(std::vector<Student> &);
 };
 
+/*! class to calculate the placeholder */
 class IndentVisitor : public Visitor
 {
   std::map<std::string, int> indents;

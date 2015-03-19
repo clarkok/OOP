@@ -110,9 +110,7 @@ WriteVisitor::write(
 
   os << "average" << endl;
 
-  for (auto p = begin; p != end; ++p) {
-    p->accept(this);
-  }
+  apply(begin, end);
 }
 
 void
