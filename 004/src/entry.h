@@ -6,6 +6,8 @@
 #include "date.h"
 
 namespace OOP {
+
+  // NOTE: Date in this Entries is always sorted
   class Entries : public std::vector<Date>
   {
   public:
@@ -13,6 +15,7 @@ namespace OOP {
     : std::vector<Date>(begin, end)
     { }
     
+    // Keep the Dates sorted
     void insertDate(Date);
   };
 }
